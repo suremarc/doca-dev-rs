@@ -9,28 +9,14 @@ fn main() {
 
     // Tell cargo to tell rustc to link the system bzip2
     // shared library.
-    println!("cargo:rustc-link-lib=doca");
+
+    println!("cargo:rustc-link-lib=doca_common");
+    println!("cargo:rustc-link-lib=doca_compress");
 
     // Tell cargo to invalidate the built crate whenever the wrapper changes
     println!("cargo:rerun-if-changed=wrapper.h");
 
-    let mut builder = bindgen::Builder::default();
-    // for whitelisted_type in ["NtNetStreamRx_t", "NtNetBuf_t", "NtErrorCodes_e"] {
-    //     builder = builder.allowlist_type(whitelisted_type);
-    // }
-
-    // for whitelisted_func in ["NT_Init", "NT_Done", "NT_ExplainError", "NT_NetRx.*"] {
-    //     builder = builder.allowlist_function(whitelisted_func);
-    // }
-
-    // for whitelisted_var in [
-    //     "NT_ERRBUF_SIZE",
-    //     "NTAPI.*",
-    //     "NT_NET_GET_SEGMENT_TIMESTAMP_TYPE",
-    //     "NT_TIMESTAMP.*",
-    // ] {
-    //     builder = builder.allowlist_var(whitelisted_var);
-    // }
+    let builder = bindgen::Builder::default();
 
     // The bindgen::Builder is the main entry point
     // to bindgen, and lets you build up options for
