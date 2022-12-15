@@ -5,7 +5,7 @@ use std::path::PathBuf;
 
 fn main() {
     // Tell cargo to look for shared libraries in the specified directory
-    println!("cargo:rustc-link-search=/opt/mellanox/doca/lib");
+    println!("cargo:rustc-link-search=/opt/mellanox/doca/lib/x86_64-linux-gnu");
 
     // Tell cargo to tell rustc to link the system bzip2
     // shared library.
