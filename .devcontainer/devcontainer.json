@@ -14,6 +14,7 @@
 		"mutantdino.resourcemonitor",
 		"rust-lang.rust-analyzer",
 		"tamasfe.even-better-toml",
-		"serayuzgur.crates"
+		"ms-vscode.cpptools",
+		"ms-vscode.cpptools-extension-pack"
 	]
 }
