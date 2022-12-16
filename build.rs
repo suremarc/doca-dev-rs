@@ -22,6 +22,7 @@ fn main() {
     // to bindgen, and lets you build up options for
     // the resulting bindings.
     let bindings = builder
+        .use_core()
         .clang_arg("-I/opt/mellanox/doca/include")
         // The input header we would like to generate
         // bindings for.
